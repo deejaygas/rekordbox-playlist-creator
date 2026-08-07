@@ -1,6 +1,8 @@
 # Filtro M3U8
 
-Script bash per macOS che filtra una playlist **M3U8** mantenendo solo le tracce presenti in una **lista testuale** di riferimento (formato `Artista - Titolo`). Utile ad esempio per estrarre da una playlist Spotify/iTunes esportata solo i brani di una scaletta specifica (es. tracklist DiscoClassic).
+Script bash per macOS che filtra una playlist **M3U8** mantenendo solo le tracce presenti in una **lista testuale** di riferimento (formato `Artista - Titolo`). Utile ad esempio per estrarre da una playlist globale di Rekordbox esportata solo i brani di una scaletta specifica (es. tracklist DiscoClassic).
+
+In questo modo è possibile creare delle nuove playlist in modo del tutto automatizzato senza selezionare le traccie singolarmente.
 
 Lo script confronta ogni traccia della playlist sia con i **metadati del tag `#EXTINF`** sia con il **nome del file audio**, usando un matching fuzzy tollerante a maiuscole/minuscole, accenti, "feat.", "Radio Edit", anni tra parentesi, ecc.
 
@@ -8,7 +10,7 @@ Lo script confronta ogni traccia della playlist sia con i **metadati del tag `#E
 
 ## Cosa fa
 
-1. Legge la playlist M3U8 di partenza.
+1. Legge la playlist M3U8 di partenza ottenuta esportando la playlist globale di Rekordbox (All Tracks)
 2. Legge un file di testo con la lista dei brani desiderati (uno per riga: `Artista - Titolo`).
 3. Per ogni brano della lista, cerca una corrispondenza nella playlist (confrontando sia il tag `EXTINF` che il nome del file).
 4. Scrive una nuova playlist M3U8 contenente solo le tracce trovate.
