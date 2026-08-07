@@ -17,6 +17,8 @@ Lo script confronta ogni traccia della playlist sia con i **metadati del tag `#E
 5. Genera un file di testo con l'elenco dei brani **non trovati**, se presenti.
 6. Mostra un riepilogo finale (tracce cercate, trovate, percentuale, non trovate).
 
+NOTA: E' possibile convertire una playlist di spotify in un elenco su file di testo qui: https://spofier.com/en/playlistsarkilar   
+
 ---
 
 ## Requisiti
